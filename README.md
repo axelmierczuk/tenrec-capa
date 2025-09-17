@@ -17,7 +17,7 @@ allowing LLMs to analyze and extract capabilities present in an IDA session.
 To install the plugin, run:
 
 ```bash
-tenrec plugins add tenrec-capa
+tenrec plugins add -p tenrec-capa
 ```
 
 ## Usage
