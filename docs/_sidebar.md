@@ -1,0 +1,3 @@
+- **Plugins**
+  - [Capa](plugins/capa.md)
+  - [Server](plugins/server.md)

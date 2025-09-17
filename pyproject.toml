@@ -1,0 +1,42 @@
+[build-system]
+requires = ["hatchling>=1.27"]
+build-backend = "hatchling.build"
+
+[project]
+name = "tenrec-capa"
+version = "0.1.0"
+description = "A tenrec plugin to integrate with flare-capa."
+readme = "README.md"
+license = {text = "MIT"}
+authors = [{name = "Axel Mierczuk"}]
+requires-python = ">=3.10"
+dependencies = [
+    "flare-capa==9.2.1",
+    "tenrec>=0.1.4",
+    "gitpython>=3.1.45",
+]
+
+[project.scripts]
+tenrec-capa = "tenrec_capa.__main__:main"
+
+[tool.uv]
+package = true
+
+[tool.hatch.build]
+exclude =[
+    ".rules/**",
+]
+
+[tool.hatch.build.targets.sdist]
+include = [
+  "tenrec_capa/**",
+  "pyproject.toml",
+  "README.md",
+  "LICENSE",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["tenrec_capa"]
+
+[project.entry-points."tenrec.plugins"]
+capa = "tenrec_capa.plugins:CapaPlugin"
