@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "tenrec-capa"
-version = "0.1.0"
+version = "0.1.1"
 description = "A tenrec plugin to integrate with flare-capa."
 readme = "README.md"
 license = {text = "MIT"}

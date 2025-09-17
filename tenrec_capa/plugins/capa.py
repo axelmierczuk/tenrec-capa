@@ -23,6 +23,7 @@ from tenrec.plugins.models import (
     operation,
 )
 
+import tenrec_capa
 from tenrec_capa.plugins.models import CapaResults, FunctionResults, MatchResults
 
 
@@ -30,7 +31,7 @@ class CapaPlugin(PluginBase):
     """Plugin to integrate the capa framework for static analysis of binaries."""
 
     name = "capa"
-    version = "1.0.0"
+    version = tenrec_capa.__version__
 
     instructions = Instructions(
         purpose="Perform static analysis on binaries to identify capabilities using the capa framework.",
